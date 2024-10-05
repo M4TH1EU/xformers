@@ -1,6 +1,29 @@
 name: wheels_build
 
 on:
+  workflow_dispatch:
+    inputs:
+      os:
+        required: true
+        type: string
+      python:
+        required: true
+        type: string
+      torch_version:
+        required: true
+        type: string
+        description: "Example: 1.13.1"
+      toolkit_type:
+        required: true
+        type: string
+        description: "Example: cuda for cuda, rocm for rocm"
+      toolkit_short_version:
+        required: true
+        type: string
+        description: "Example: 117 for 11.7"
+      artifact_tag:
+        default: "facebookresearch"
+        type: string
   workflow_call:
     inputs:
       os:
