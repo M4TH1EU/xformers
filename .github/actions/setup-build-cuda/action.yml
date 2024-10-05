@@ -31,6 +31,7 @@ runs:
           "118": ("11.8.0", "https://developer.download.nvidia.com/compute/cuda/11.8.0/local_installers/cuda_11.8.0_520.61.05_linux.run"),
           "6.0": ("6.0.2", "https://repo.radeon.com/amdgpu-install/6.0.2/rhel/7.9/amdgpu-install-6.0.60002-1.el7.noarch.rpm"),
           "6.1": ("6.1.2", "https://repo.radeon.com/amdgpu-install/6.1.2/el/7/amdgpu-install-6.1.60102-1.el7.noarch.rpm"),
+          "6.2": ("6.2", "https://repo.radeon.com/amdgpu-install/6.2/el/7/amdgpu-install-6.2.60200-1.el7.noarch.rpm"),
         }[cushort]
         with open(os.environ['GITHUB_OUTPUT'], "r+") as fp:
           fp.write("CUDA_VERSION=" + full_version + "\n")
